@@ -6,7 +6,7 @@ import './index.css';
 const App = () => {
     return (
         <div className="app">
-            <h1>My Scratch Mod</h1>
+            <h1>NuclearMod</h1>
             <p>Scratch mod loading...</p>
         </div>
     );
