@@ -310,6 +310,44 @@ const extensions = [
       }
     }
 ];
+const MathExtension = {
+    id: 'nuclear-math',
+    name: 'Math Tools',
+
+    blocks: [
+        {
+            opcode: 'math_add',
+            blockType: 'reporter',
+            text: '[A] + [B]',
+            arguments: {
+                A: 0,
+                B: 0
+            }
+        },
+
+        {
+            opcode: 'math_multiply',
+            blockType: 'reporter',
+            text: '[A] × [B]',
+            arguments: {
+                A: 0,
+                B: 0
+            }
+        }
+    ],
+
+    opcodes: {
+        math_add(args) {
+            return Number(args.A) + Number(args.B);
+        },
+
+        math_multiply(args) {
+            return Number(args.A) * Number(args.B);
+        }
+    }
+};
+
+module.exports = MathExtension;
 
 export default function Extensions() {
     const [search, setSearch] = useState('');
