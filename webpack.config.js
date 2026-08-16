@@ -57,3 +57,34 @@ module.exports = {
 
   devtool: 'source-map'
 };
+const path = require('path');
+
+module.exports = {
+    mode: 'production',
+
+    entry: './src/index.js',
+
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'nuclearmod-vm.js',
+
+        library: {
+            name: 'NuclearModVM',
+            type: 'umd'
+        },
+
+        globalObject: 'this'
+    },
+
+    target: ['web', 'es2018'],
+
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: 'babel-loader'
+            }
+        ]
+    }
+};
