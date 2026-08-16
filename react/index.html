@@ -1,0 +1,22 @@
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import './index.css';
+
+function Home() {
+    return (
+        <main className="home">
+            <header className="home-header">
+                <h1>💣 NuclearMod</h1>
+                <p>Create. Remix. Build.</p>
+            </header>
+
+            <section className="home-actions">
+                <button>🆕 Create</button>
+                <button>📂 Open Project</button>
+                <button>📚 My Projects</button>
+            </section>
+        </main>
+    );
+}
+
+createRoot(document.getElementById('app')).render(<Home />);
