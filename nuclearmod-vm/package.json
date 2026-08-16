@@ -1,0 +1,16 @@
+{
+  "name": "nuclearmod-vm",
+  "version": "0.1.0",
+  "description": "The virtual machine for NuclearMod.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test",
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "scratch",
+    "vm",
+    "nuclearmod"
+  ],
+  "license": "MIT"
+}
